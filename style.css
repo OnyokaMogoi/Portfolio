@@ -1,0 +1,199 @@
+/* Basic reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Header styling */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    padding: 20px;
+    color: white;
+}
+
+header .logo {
+    font-size: 1.5em;
+}
+
+header nav ul {
+    list-style-type: none;
+}
+
+header nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+header nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+/* Hero section */
+#hero {
+    background-image: url('Images/Profile 1..JPG'); /* Set the background image */
+    background-size: cover; /* Ensure the image covers the entire section */
+    background-position: center; /* Center the background image */
+    color: white; /* Text color */
+    padding: 100px 20px;
+    text-align: center;
+    position: relative; /* Positioning context for overlay */
+}
+
+/* Optional: Add a dark overlay for better text visibility */
+#hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black overlay */
+    z-index: 1; /* Make sure the overlay is below text */
+}
+
+#hero h1, #hero p {
+    position: relative; /* Make sure text appears above the overlay */
+    z-index: 2; /* Bring text above the overlay */
+}
+
+#hero .btn {
+    background-color: #ff6347; /* Button background */
+    padding: 10px 20px;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 20px; /* Add margin to create space above the button */
+}
+
+/* About Section */
+#about {
+    padding: 50px;
+    background-color: white;
+    text-align: center;
+}
+
+#about h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+/* Profile image styling */
+.profile-img {
+    width: 150px; /* Adjust image width */
+    height: auto; /* Keeps aspect ratio */
+    border-radius: 50%; /* Makes the image circular */
+    display: block; /* Centers the image */
+    margin: 0 auto 20px; /* Add bottom margin and center */
+}
+
+/* Skills Section */
+#skills {
+    padding: 50px;
+    background-color: #eee;
+}
+
+.skills-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.skill {
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    border-radius: 5px;
+    margin: 10px;
+}
+
+/* Marquee Skills */
+.marquee {
+    overflow: hidden;
+    white-space: nowrap;
+    box-sizing: border-box;
+    padding: 10px 0; /* Add padding for spacing */
+}
+
+.marquee p {
+    display: inline-block;
+    animation: marquee 15s linear infinite; /* Adjust duration for speed */
+    font-size: 18px; /* Adjust font size as needed */
+}
+
+/* Animation for marquee effect */
+@keyframes marquee {
+    0% { transform: translateX(100%); }
+    100% { transform: translateX(-100%); }
+}
+
+/* Projects Section */
+#projects {
+    padding: 50px;
+    background-color: white;
+}
+
+.project {
+    margin-bottom: 20px;
+}
+
+/* Project images styling */
+.project-img {
+    width: 100%; /* Full width of container */
+    max-width: 800px; /* Limits the maximum width */
+    height: auto; /* Keeps aspect ratio */
+    margin-bottom: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Contact Section */
+#contact {
+    padding: 50px;
+    background-color: #eee;
+    text-align: center;
+}
+
+#contact form {
+    display: inline-block;
+    text-align: left;
+    max-width: 400px;
+    width: 100%;
+}
+
+#contact input, #contact textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+}
+
+#contact input[type="submit"] {
+    background-color: #333;
+    color: white;
+    cursor: pointer;
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+footer .social-links a {
+    color: white;
+    margin-right: 10px;
+    text-decoration: none;
+}
